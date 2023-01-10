@@ -17,12 +17,12 @@ class PortfolioDataService {
     
     init() {
         container = NSPersistentContainer(name: containerName)
-        container.loadPersistentStores { <#NSPersistentStoreDescription#>, error in
+        container.loadPersistentStores { _, error in
             if let error = error {
                 print("Error loading CoreData! \(error)")
                 
-                
             }
+            self.getPortfolio()
         }
     }
     
@@ -33,6 +33,16 @@ class PortfolioDataService {
         // check if coin is already in portfolio
         if let entity = savedEntites.first(where: {$0.coinID == coin.id }) {
              
+            if amount > 0 {
+                update(entity: entity, amount: amount)
+                
+            } else {
+                delete(entity: entity)
+            }
+        }
+        else {
+            add(coin: coin, amount: amount)
+            
         }
     }
     
