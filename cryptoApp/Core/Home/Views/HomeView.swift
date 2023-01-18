@@ -106,7 +106,6 @@ extension HomeView {
                     }
                 }
         }
-        
     }
     
     private var allCoinsList: some View {
