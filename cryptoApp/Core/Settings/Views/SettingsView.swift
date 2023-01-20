@@ -11,7 +11,7 @@ struct SettingsView: View {
     
     let defaultURL = URL(string: "https://www.google.com")!
     let youtubeURL = URL(string: "https://www.youtube.com")!
-    let linkedinURL = URL(string: "https://www.linkedin.com/in/aysegulsari/")!
+//    let linkedinURL = URL(string: "https://www.linkedin.com/in/aysegulsari/")!
     let coingeckoURL = URL(string: "https://www.coingecko.com")!
     let personalURL = URL(string: "https://www.github.com/1lugesya")!
     
@@ -59,8 +59,7 @@ extension SettingsView {
                     
                 }
                 .padding(.vertical)
-                Link("Subcribe on Youtube 🔎", destination: youtubeURL)
-                Link("xxxx", destination: linkedinURL)
+                Link("Visit on Youtube 🔎", destination: youtubeURL)
              
             }
         }
@@ -81,7 +80,7 @@ extension SettingsView {
                     
                 }
                 .padding(.vertical)
-                Link("Visit CoinGecko 🔎", destination: coingeckoURL)
+                Link("Visit CoinGecko 🦎", destination: coingeckoURL)
             }
         }
     
@@ -89,10 +88,10 @@ extension SettingsView {
         
             Section(header: Text("Developer")) {
                 VStack (alignment: .leading) {
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+//                    Image("xx")
+//                        .resizable()
+//                        .frame(width: 100, height: 100)
+//                        .clipShape(RoundedRectangle(cornerRadius: 20))
                     Text("This app was developed by Aysegul. It uses SwiftUI and is written %100 in Swift. The project benefits from multi-threading, publishers/subscribers and data persistance.")
                         .font(.callout)
                         .fontWeight(.medium)
@@ -100,7 +99,7 @@ extension SettingsView {
                     
                 }
                 .padding(.vertical)
-                Link("Visit linkedin💛", destination: linkedinURL)
+                Link("Visit Github 🚀", destination: personalURL)
             }
         }
     
